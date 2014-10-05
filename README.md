@@ -31,7 +31,7 @@ function renderMethod(template, model)
 
 *Required*
 
-This is designed to mimic the [Express render method](http://expressjs.com/api.html#app.render). Load your own templating system elsewhere in your app and call its render method here a function of your own design.
+This is designed to mimic the [Express render method](http://expressjs.com/api.html#app.render). Load your own templating system elsewhere in your app and call its render method here as a function of your own design.
 
 As with Express, the `template` argument should refer to a named template and the `model` argument should be a JSON string or JavaScript object.
 
