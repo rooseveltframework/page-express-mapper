@@ -1,0 +1,28 @@
+{
+  "name": "page.js-express-mapper",
+  "description": "Plugin for page.js which directly imitates the Express API.",
+  "author": "Eric Newport <kethinov@gmail.com>",
+  "version": "1.0.0",
+  "homepage": "https://github.com/kethinov/page.js-express-mapper",
+  "license": "Creative Commons Attribution 4.0 International License",
+  "main": "page.js-express-mapper.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kethinov/page.js-express-mapper.git"
+  },
+  "keywords": [
+    "page.js",
+    "express"
+    "expressjs",
+    "express-mapper",
+    "page.js-express-mapper",
+    "pagejsExpressMapper",
+    "pagejs",
+  ],
+  "ignore": [
+    ".gitignore",
+    "bower.json",
+    "README.md",
+    "sampleApp.html"
+  ]
+}
