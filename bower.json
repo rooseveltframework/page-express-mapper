@@ -12,12 +12,12 @@
   },
   "keywords": [
     "page.js",
-    "express"
+    "express",
     "expressjs",
     "express-mapper",
     "page.js-express-mapper",
     "pagejsExpressMapper",
-    "pagejs",
+    "pagejs"
   ],
   "ignore": [
     ".gitignore",
