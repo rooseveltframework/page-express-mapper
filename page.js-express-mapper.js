@@ -1,8 +1,7 @@
 ;(function() {
 
   function pageExpressMapper(params) {
-    var app,
-        res;
+    var app, res;
 
     // renderMethod param
     if (params.renderMethod && typeof params.renderMethod == 'function') {
@@ -10,7 +9,7 @@
       res = {
         render: params.renderMethod, // template, model
         redirect: function(route) {
-          page(route);
+          page.redirect(route);
         }
       };
 
@@ -18,7 +17,7 @@
       page.Route.prototype.middleware = function(fn) {
         var self = this;
         return function(ctx, next) {
-          if (self.match(ctx.path, ctx.params)) return fn(ctx, res, next);
+          if (self.match(ctx.path, ctx.params)) return fn(ctx, res, next); // new
           next();
         };
       };
@@ -55,7 +54,11 @@
     }
   }
   
-  if ('undefined' != typeof window) {
+  // expose pageExpressMapper
+  if ('undefined' == typeof module) {
     window.pageExpressMapper = pageExpressMapper;
+  }
+  else {
+    module.exports = pageExpressMapper;
   }
 })();
