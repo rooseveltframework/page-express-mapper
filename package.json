@@ -1,6 +1,6 @@
 {
   "name": "page.js-express-mapper.js",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Plugin for page.js which directly imitates the Express API.",
   "main": "page.js-express-mapper.js",
   "repository": {
