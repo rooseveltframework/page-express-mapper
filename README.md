@@ -1,9 +1,9 @@
 page.js-express-mapper.js [![Gittip](http://img.shields.io/gittip/kethinov.png)](https://www.gittip.com/kethinov/)
 ===
 
-A plugin for [page.js](http://visionmedia.github.io/page.js/) which aims to provide a direct imitation of the [Express](http://expressjs.com/) API so you can share controller code on the client and the server with your Express application without modification.
+A plugin for [page.js](http://visionmedia.github.io/page.js/) which aims to provide a direct imitation of the [Express](http://expressjs.com/) API so you can write isomorphic/universal controller code that can be shared on the client and the server with your Express application without modification.
 
-With this plugin you should be able to write apps that share the same models, views, and controllers on the client and the server, so long as you run Express on the server, page.js on the client, and use a JS templating system that can run on the client and server.
+With this plugin you should be able to write isomorphic/universal JavaScript apps that share the same models, views, and controllers on the client and the server, so long as you run Express on the server, page.js on the client, and use a JS templating system that can run on the client and server.
 
 Installation
 ===
