@@ -1,4 +1,4 @@
-page.js-express-mapper.js [![Gittip](http://img.shields.io/gittip/kethinov.png)](https://www.gittip.com/kethinov/)
+page.js-express-mapper.js
 ===
 
 A plugin for [page.js](http://visionmedia.github.io/page.js/) which aims to provide a direct imitation of the [Express](http://expressjs.com/) API so you can write isomorphic/universal controller code that can be shared on the client and the server with your Express application without modification.
