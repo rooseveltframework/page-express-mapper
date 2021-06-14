@@ -1,7 +1,7 @@
 page-express-mapper
 ===
 
-[![npm](https://img.shields.io/npm/v/page-express-validator.svg)](https://www.npmjs.com/package/page-express-validator)
+[![npm](https://img.shields.io/npm/v/page-express-mapper.svg)](https://www.npmjs.com/package/page-express-mapper)
 
 A plugin for [page.js](http://visionmedia.github.io/page.js/) which aims to provide a direct imitation of the [Express](http://expressjs.com/) API so you can write isomorphic/universal router code that can be shared on the client and the server with your Express application without modification.
 
