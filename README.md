@@ -12,7 +12,7 @@ This module was built and is maintained by the [Roosevelt web framework](https:/
 Usage
 ===
 
-- Add `page-express-validator` to your npm dependencies.
+- Add `page-express-mapper` to your npm dependencies.
 - Load `page-express-mapper.js` into your frontend JS bundle along with `page.js`.
 - Then initialize it by calling `pageExpressMapper()` *before* defining any routes.
 
