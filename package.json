@@ -1,26 +1,64 @@
 {
-  "name": "page.js-express-mapper.js",
-  "version": "1.0.6",
+  "name": "page-express-mapper",
   "description": "Plugin for page.js which directly imitates the Express API.",
-  "main": "page.js-express-mapper.js",
+  "author": "Roosevelt Framework Team <rooseveltframework@gmail.com>",
+  "contributors": [
+    {
+      "name": "Contributors",
+      "url": "https://github.com/rooseveltframework/page-express-mapper/graphs/contributors"
+    }
+  ],
+  "version": "2.0.0",
+  "files": [
+    "dist/page-express-mapper.js"
+  ],
+  "homepage": "https://github.com/rooseveltframework/page-express-mapper",
+  "license": "CC-BY-4.0",
+  "main": "page-express-mapper.js",
+  "readmeFilename": "README.md",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "dependencies": {
+    "page": "1.11.6"
+  },
+  "devDependencies": {
+    "eslint": "~7.24.0",
+    "http-server": "~0.12.3",
+    "standard": "~16.0.3",
+    "webpack-cli": "~4.7.0"
+  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/kethinov/page.js-express-mapper.js.git"
+    "url": "git://github.com/rooseveltframework/page-express-mapper.git"
   },
-  "author": "Eric Newport <kethinov@gmail.com> (http://kethinov.com/)",
-  "license": "CC-BY-4.0",
-  "bugs": {
-    "url": "https://github.com/kethinov/page.js-express-mapper.js/issues"
-  },
-  "homepage": "https://github.com/kethinov/page.js-express-mapper.js",
-  "readmeFilename": "README.md",
   "keywords": [
     "page.js",
     "express",
-    "expressjs",
     "express-mapper",
     "page.js-express-mapper",
-    "pagejsExpressMapper",
-    "pagejs"
-  ]
+    "pageExpressMapper",
+    "page"
+  ],
+  "eslintConfig": {
+    "parserOptions": {
+      "ecmaVersion": 2020
+    },
+    "plugins": [
+      "ava"
+    ],
+    "rules": {
+      "ava/no-only-test": "error"
+    }
+  },
+  "scripts": {
+    "build": "webpack",
+    "lint": "standard && eslint test/test.js",
+    "test": "echo \"TODO: tests\"",
+    "sample-app": "webpack && http-server -o sampleApp/sampleApp.html"
+  },
+  "funding": {
+    "type": "individual",
+    "url": "https://github.com/sponsors/kethinov"
+  }
 }

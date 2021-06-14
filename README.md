@@ -1,25 +1,20 @@
-page.js-express-mapper.js
+page-express-mapper
 ===
 
-A plugin for [page.js](http://visionmedia.github.io/page.js/) which aims to provide a direct imitation of the [Express](http://expressjs.com/) API so you can write isomorphic/universal controller code that can be shared on the client and the server with your Express application without modification.
+[![npm](https://img.shields.io/npm/v/page-express-validator.svg)](https://www.npmjs.com/package/page-express-validator)
 
-With this plugin you should be able to write isomorphic/universal JavaScript apps that share the same models, views, and controllers on the client and the server, so long as you run Express on the server, page.js on the client, and use a JS templating system that can run on the client and server.
+A plugin for [page.js](http://visionmedia.github.io/page.js/) which aims to provide a direct imitation of the [Express](http://expressjs.com/) API so you can write isomorphic/universal router code that can be shared on the client and the server with your Express application without modification.
 
-Installation
+With this plugin you should be able to write isomorphic/universal JavaScript apps that maximize code reuse on the client and the server, so long as you run Express on the server, page.js on the client, and use a JS-based templating system that can run on the client and server.
+
+This module was built and is maintained by the [Roosevelt web framework](https://github.com/rooseveltframework/roosevelt) [team](https://github.com/orgs/rooseveltframework/people), but it can be used independently of Roosevelt as well.
+
+Usage
 ===
 
-Either download the file from here or use [bower](http://bower.io/):
-
-```
-bower install page.js-express-mapper.js
-```
-
-Initialization
-===
-
-Load `page.js-express-mapper.js` after loading `page.js`.
-
-Then initialize it by calling `pageExpressMapper()` *before* defining any routes.
+- Add `page-express-validator` to your npm dependencies.
+- Load `page-express-mapper.js` into your frontend JS bundle along with `page.js`.
+- Then initialize it by calling `pageExpressMapper()` *before* defining any routes.
 
 Params
 ===
@@ -35,7 +30,7 @@ This is designed to mimic the [Express render method](http://expressjs.com/api.h
 
 As with Express, the `template` argument should refer to a named template and the `model` argument should be a JSON string or JavaScript object.
 
-For example, using the [Teddy](https://github.com/kethinov/teddy) templating engine:
+For example, using the [Teddy](https://github.com/rooseveltframework/teddy) templating engine:
 
 ```js
 pageExpressMapper({
@@ -47,17 +42,6 @@ pageExpressMapper({
 ```
 
 This should work with any templating engine which supports both client-side rendering and Express on the server-side.
-
-string expressAppName
----
-
-*Optional*
-
-In the Express API, routes are defined as [children of a named app object](http://expressjs.com/api.html#app.route).
-
-As such, to directly imitate Express client-side, this plugin defines a global variable named for your Express app just as is done in Node.js.
-
-Default: `'app'`
 
 object customRouter
 ---
@@ -88,11 +72,10 @@ Default: `undefined`
 Tying it all together
 ===
 
-
 Assuming your server code begins as:
 
 ```js
-var app = express();
+const app = express()
 ```
 
 And your client code begins as something like:
@@ -104,8 +87,7 @@ pageExpressMapper({
      * your favorite templating
      * system here
      */
-  },
-  expressAppName: 'app'
+  }
 });
 ```
 
@@ -120,27 +102,8 @@ app.route('/someRoute').get(function(req, res) {
 Sample app
 ===
 
-Check out `sampleApp.html` for simple demonstration of how this works.
-
-To run it, follow these steps:
-
-Clone this repo:
-
-```
-git clone https://github.com/kethinov/page.js-express-mapper.js.git
-```
-
-Install page.js:
-
-```
-cd page.js-express-mapper.js
-bower install page.js
-```
-
-Start a simple web server (example assumes you have python installed, but you could use any web server):
-
-```
-python -m SimpleHTTPServer
-```
-
-Then open [http://localhost:8000/sampleApp.html](http://localhost:8000/) in your browser.
+- Clone this repo.
+- Install dependencies.
+- `cd` to your clone.
+- `npm run sample-app`.
+- Open the browser dev tools and examine the console logs when you click the links in the sample app to see evidence of it working.
