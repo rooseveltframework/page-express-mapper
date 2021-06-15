@@ -36,10 +36,8 @@ const pageExpressMapper = require('page-express-mapper')
 // configure pageExpressMapper
 const router = pageExpressMapper({
   renderMethod: function(template, model) {
-    /* render a template using
-     * your favorite templating
-     * system here
-     */
+    // render a template using your
+    // favorite templating system here
   }
 })
 
@@ -63,6 +61,8 @@ module.exports = function(router) {
   })
 }
 ```
+
+Note: You will also need a way to share your templates with the client and server as well. If you're using [Roosevelt](https://github.com/rooseveltframework/roosevelt), you can use the `clientViews` feature. If you're using vanilla Express, you'll need to create a build script that will allow the template files to be shared on both sides.
 
 Params
 ===
