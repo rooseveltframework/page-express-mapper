@@ -19,6 +19,8 @@ Usage
 Assuming your server code begins something like:
 
 ```js
+// express-server.js
+
 // init express
 const app = express()
 
@@ -29,6 +31,8 @@ require('routes')(app)
 And your client code begins something like:
 
 ```js
+// client.js
+
 // require dependencies
 const page = require('page')
 const pageExpressMapper = require('page-express-mapper')
@@ -54,6 +58,7 @@ You can then write identical routes for both sides, such as:
 
 ```js
 // routes.js
+
 // these routes will be shared on both the client and server
 module.exports = function(router) {
   router.route('/someRoute').get(function(req, res) {
