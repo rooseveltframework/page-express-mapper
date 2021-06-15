@@ -14,12 +14,60 @@ Usage
 
 - Add `page-express-mapper` to your npm dependencies.
 - Load `page-express-mapper.js` into your frontend JS bundle along with `page.js`.
-- Then initialize it by calling `pageExpressMapper()` *before* defining any routes.
+- Then initialize it by calling `pageExpressMapper()` *before* defining any routes:
+
+Assuming your server code begins something like:
+
+```js
+// init express
+const app = express()
+
+// load an isomorphic routes.js file that declares routes
+require('routes')(app)
+```
+
+And your client code begins something like:
+
+```js
+// require dependencies
+const page = require('page')
+const pageExpressMapper = require('page-express-mapper')
+
+// configure pageExpressMapper
+const router = pageExpressMapper({
+  renderMethod: function(template, model) {
+    /* render a template using
+     * your favorite templating
+     * system here
+     */
+  }
+})
+
+
+// load the same isomorphic routes.js file
+// you can share this file verbatim with the server
+require('routes')(router)
+
+// init page.js
+page()
+```
+
+You can then write identical routes for both sides, such as:
+
+```js
+// routes.js
+// these routes will be shared on both the client and server
+module.exports = function(router) {
+  router.route('/someRoute').get(function(req, res) {
+    res.render('someTemplate', {some: 'model'})
+  })
+}
+```
 
 Params
 ===
 
-`pageExpressMapper()` accepts the following params:
+`pageExpressMapper()` returns a `router` object to attach routes to (like Express) and accepts the following params:
 
 function renderMethod(template, model)
 ---
@@ -35,10 +83,10 @@ For example, using the [Teddy](https://github.com/rooseveltframework/teddy) temp
 ```js
 pageExpressMapper({
   renderMethod: function(template, model) {
-    var mainElement = document.getElementsByTagName('main')[0];
-    mainElement.innerHTML = teddy.render(template, model);
+    const newHTML = teddy.render(template, model)
+    // do something with the new HTML
   }
-});
+})
 ```
 
 This should work with any templating engine which supports both client-side rendering and Express on the server-side.
@@ -55,49 +103,19 @@ pageExpressMapper({
   renderMethod: someRenderMethod,
   customRouter: {
     get: function(route, callback) {
-      page(route, callback);
+      page(route, callback)
     },
     post: function(route, callback) {
-      page(route, callback);
+      page(route, callback)
     },
     all: function(route, callback) {
-      page(route, callback);
+      page(route, callback)
     }
   }
-});
+})
 ```
 
 Default: `undefined`
-
-Tying it all together
-===
-
-Assuming your server code begins as:
-
-```js
-const app = express()
-```
-
-And your client code begins as something like:
-
-```js
-pageExpressMapper({
-  renderMethod: function(template, model) {
-    /* render a template using
-     * your favorite templating
-     * system here
-     */
-  }
-});
-```
-
-You can then write identical routes for both sides, such as:
-
-```js
-app.route('/someRoute').get(function(req, res) {
-  res.render('someTemplate', {some: 'model'});
-});
-```
 
 Sample app
 ===
