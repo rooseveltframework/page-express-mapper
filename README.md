@@ -3,9 +3,9 @@ page-express-mapper
 
 [![npm](https://img.shields.io/npm/v/page-express-mapper.svg)](https://www.npmjs.com/package/page-express-mapper)
 
-A plugin for [page.js](http://visionmedia.github.io/page.js/) which aims to provide a direct imitation of the [Express](http://expressjs.com/) API so you can write isomorphic/universal router code that can be shared on the client and the server with your Express application without modification.
+A plugin for [page.js](http://visionmedia.github.io/page.js/) which aims to provide a direct imitation of the [Express](http://expressjs.com/) API so you can write isomorphic (aka universal, [amphibious](https://twitter.com/kethinov/status/566896168324825088), etc) router code that can be shared on the client and the server with your Express application without modification.
 
-With this plugin you should be able to write isomorphic/universal JavaScript apps that maximize code reuse on the client and the server, so long as you run Express on the server, page.js on the client, and use a JS-based templating system that can run on the client and server.
+With this plugin you should be able to write isomorphic JavaScript apps that maximize code reuse on the client and the server, so long as you run Express on the server, page.js on the client, and use a JS-based templating system that can run on the client and server.
 
 This module was built and is maintained by the [Roosevelt web framework](https://github.com/rooseveltframework/roosevelt) [team](https://github.com/orgs/rooseveltframework/people), but it can be used independently of Roosevelt as well.
 
