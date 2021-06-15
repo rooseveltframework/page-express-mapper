@@ -25,6 +25,7 @@ Assuming your server code begins something like:
 const app = express()
 
 // load an isomorphic routes.js file that declares routes
+// you can share this file verbatim with the server
 require('routes')(app)
 ```
 
@@ -46,7 +47,7 @@ const router = pageExpressMapper({
 })
 
 
-// load the same isomorphic routes.js file
+// load the same isomorphic routes.js file as above
 // you can share this file verbatim with the server
 require('routes')(router)
 
