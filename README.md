@@ -25,7 +25,7 @@ Assuming your server code begins something like:
 const app = express()
 
 // load an isomorphic routes.js file that declares routes
-// you can share this file verbatim with the server
+// you can share this file verbatim with the client
 require('routes')(app)
 ```
 
