@@ -23,10 +23,14 @@
     "page": "1.11.6"
   },
   "devDependencies": {
-    "eslint": "~7.29.0",
     "http-server": "~0.12.3",
-    "standard": "~16.0.3",
-    "webpack-cli": "~4.7.0"
+    "webpack-cli": "~4.7.0",
+    "ava": "~3.15.0",
+    "c8": "~7.7.3",
+    "codecov": "~3.8.2",
+    "eslint": "~7.30.0",
+    "eslint-plugin-ava": "~12.0.0",
+    "standard": "~16.0.3"
   },
   "repository": {
     "type": "git",
@@ -53,9 +57,11 @@
   },
   "scripts": {
     "build": "webpack",
+    "sample-app": "webpack && http-server -o sampleApp/sampleApp.html",
+    "codecov": "codecov",
+    "coverage": "c8 --reporter=text --reporter=lcov ava",
     "lint": "standard && eslint test/test.js",
-    "test": "echo \"TODO: tests\"",
-    "sample-app": "webpack && http-server -o sampleApp/sampleApp.html"
+    "test": "ava"
   },
   "funding": {
     "type": "individual",
