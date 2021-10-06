@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "http-server": "~13.0.0",
-    "webpack-cli": "~4.8.0",
+    "webpack-cli": "~4.9.0",
     "ava": "~3.15.0",
     "c8": "~7.9.0",
     "codecov": "~3.8.3",
