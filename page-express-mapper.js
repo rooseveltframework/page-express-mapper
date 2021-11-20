@@ -31,18 +31,26 @@ function pageExpressMapper (params) {
         return {
           get: function (callback) {
             page(route, callback)
+            router.stack[route] = router.stack[route] || {}
+            router.stack[route].get = true
           },
           post: function (callback) {
             page(route, callback)
+            router.stack[route] = router.stack[route] || {}
+            router.stack[route].post = true
           },
           all: function (callback) {
             page(route, callback)
+            router.stack[route] = router.stack[route] || {}
+            router.stack[route].get = true
+            router.stack[route].post = true
           }
         }
       }
     }
   }
 
+  router.stack = {}
   return router
 }
 

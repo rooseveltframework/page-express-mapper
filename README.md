@@ -124,6 +124,25 @@ pageExpressMapper({
 
 Default: `undefined`
 
+The `router` object returned by `pageExpressMapper()` also has a member object called `stack` indexed by route with member booleans for whether the route accepts GET, POST, or both. This is useful for getting a list of all registered routes on your frontend.
+
+Example `router.stack` object:
+
+```javascript
+{
+  "/": {
+    "get": true
+  },
+  "/about": {
+    "get": true
+  },
+  "/pageWithForm": {
+    "get": true,
+    "post": true
+  }
+}
+```
+
 Sample app
 ===
 
