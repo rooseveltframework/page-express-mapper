@@ -4,6 +4,11 @@
 
 - Put your changes here...
 
+## 2.0.2
+
+- Added support for Express middleware (multiple chained callbacks).
+- Bumped various dependencies.
+
 ## 2.0.1
 
 - Added `router.stack` feature.

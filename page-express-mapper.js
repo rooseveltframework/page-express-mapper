@@ -29,18 +29,18 @@ function pageExpressMapper (params) {
     router = {
       route: function (route) {
         return {
-          get: function (callback) {
-            page(route, callback)
+          get: function (...callbacks) {
+            page(route, ...callbacks)
             router.stack[route] = router.stack[route] || {}
             router.stack[route].get = true
           },
-          post: function (callback) {
-            page(route, callback)
+          post: function (...callbacks) {
+            page(route, ...callbacks)
             router.stack[route] = router.stack[route] || {}
             router.stack[route].post = true
           },
-          all: function (callback) {
-            page(route, callback)
+          all: function (...callbacks) {
+            page(route, ...callbacks)
             router.stack[route] = router.stack[route] || {}
             router.stack[route].get = true
             router.stack[route].post = true

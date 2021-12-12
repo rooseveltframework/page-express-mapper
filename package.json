@@ -8,7 +8,7 @@
       "url": "https://github.com/rooseveltframework/page-express-mapper/graphs/contributors"
     }
   ],
-  "version": "2.0.1",
+  "version": "2.0.2",
   "files": [
     "dist/page-express-mapper.js"
   ],
@@ -28,7 +28,7 @@
     "ava": "~3.15.0",
     "c8": "~7.10.0",
     "codecov": "~3.8.3",
-    "eslint": "~8.2.0",
+    "eslint": "~8.4.1",
     "eslint-plugin-ava": "~13.1.0",
     "standard": "~16.0.4"
   },
