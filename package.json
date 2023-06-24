@@ -17,20 +17,20 @@
   "main": "page-express-mapper.js",
   "readmeFilename": "README.md",
   "engines": {
-    "node": ">=14.0.0"
+    "node": ">=16.0.0"
   },
   "dependencies": {
     "page": "1.11.6"
   },
   "devDependencies": {
     "http-server": "14.1.1",
-    "webpack-cli": "5.0.1",
-    "ava": "5.2.0",
-    "c8": "7.13.0",
+    "webpack-cli": "5.1.4",
+    "ava": "5.3.1",
+    "c8": "8.0.0",
     "codecov": "3.8.3",
-    "eslint": "8.38.0",
+    "eslint": "8.43.0",
     "eslint-plugin-ava": "14.0.0",
-    "standard": "17.0.0"
+    "standard": "17.1.0"
   },
   "repository": {
     "type": "git",
