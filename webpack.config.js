@@ -17,7 +17,8 @@ module.exports = [
     },
     node: {
       __dirname: false
-    }
+    },
+    mode: 'development' // or 'production' based on your needs
   },
   {
     name: 'sampleApp',
@@ -35,6 +36,7 @@ module.exports = [
     },
     node: {
       __dirname: false
-    }
+    },
+    mode: 'development' // or 'production' based on your needs
   }
 ]
